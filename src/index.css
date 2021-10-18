@@ -27,19 +27,23 @@ code {
   color: white;
 }
 
-.container {
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  min-height: 100vh;
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
 }
 
-.notes-list {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+}
+
+.search input:focus {
+  outline: none;
 }
 
 .note.new {
@@ -68,6 +72,12 @@ textarea:focus {
   cursor: pointer;
 }
 
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .note {
   background-color: #d1e8e4;
   border-radius: 10px;
@@ -78,32 +88,21 @@ textarea:focus {
   justify-content: space-between;
   white-space: pre-wrap;
 }
-
-.note-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .delete-icon {
   cursor: pointer;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  background-color: rgb(233, 233, 233);
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 1.5em;
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-.search input {
-  border: none;
-  background-color: rgb(233, 233, 233);
-  width: 100%;
-}
-
-.search input:focus {
-  outline: none;
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
 }
